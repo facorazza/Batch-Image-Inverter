@@ -30,7 +30,7 @@ def invert(quality, paths):
 
 
 def _invert(quality, filename):
-    if filename.lower().endswith(('.jpeg', '.jpg', '.png')):
+    if filename.lower().endswith(('.jpeg', '.jpg', '.png', '.gif', '.tiff')):
         print(f'Inverting {filename}')
         image = Image.open(filename)
         image_invert = ImageOps.invert(image.convert('RGB'))
